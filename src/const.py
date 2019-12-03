@@ -6,18 +6,15 @@ from src.networks import WholeNetwork as _net
 from src.lm_networks import LandmarkBranchUpsample as _lm_branch
 from src.utils import Evaluator as _evaluator
 
+# loss weight = 100
+# full vs attr only
 
 base_path = '/home/kauecano/'
 
 _name = 'exp1-nvidia2'
 
 # Network
-#USE_NET = _net
-USE_NET = 'VGG16'
-#USE_NET = 'RESNET50'
-#USE_NET = 'MOBILENET_V2'
-
-
+USE_NET = _net
 LM_SELECT_VGG = 'conv4_3'
 LM_SELECT_VGG_SIZE = 28
 LM_SELECT_VGG_CHANNEL = 512
@@ -35,8 +32,8 @@ BATCH_SIZE = 32
 VAL_BATCH_SIZE = 40
 
 #WORK
-NUM_WORKERS = 14
-NUM_EPOCH = 20
+NUM_WORKERS = 16
+NUM_EPOCH = 100
 
 #LR
 LEARNING_RATE = 0.0001
@@ -46,6 +43,7 @@ LEARNING_RATE_DECAY = 0.8
 WEIGHT_LOSS_CATEGORY = 0.001
 WEIGHT_LOSS_ATTR = 1000
 WEIGHT_LOSS_LM_POS = 0.001
+
 
 # 0-1 WEIGHT
 WEIGHT_ATTR_NEG = 0.01
