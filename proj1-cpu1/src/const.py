@@ -48,9 +48,9 @@ VGG16_ACT_FUNC_IN_POSE = 0
 MODEL_NAME = 'vgg16.pkl'
 
 if 'dlcs302-2' == _hostname:
-    base_path = ''
+    base_path = '/Users/canok/Documents/MachineLearningUFSC/DeepFashion/'
 else:
-    base_path = ''
+    base_path = '/Users/canok/Documents/MachineLearningUFSC/DeepFashion/'
 
 NUM_EPOCH = 20
 LEARNING_RATE = 0.0001
