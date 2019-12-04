@@ -9,6 +9,8 @@ from src.utils import Evaluator as _evaluator
 # loss weight = 100
 # full vs attr only
 
+# gpu-10k-attr-we100-e100-b32-wo16
+
 base_path = '/home/kauecano/'
 
 _name = 'exp1-nvidia2'

@@ -6,6 +6,8 @@ from src.networks import WholeNetwork as _net
 from src.lm_networks import LandmarkBranchUpsample as _lm_branch
 from src.utils import Evaluator as _evaluator
 
+
+# cpu-10k-full-we10-e20-b16-wo4
 _name = 'whole'
 _time = _time.strftime('%m-%d %H:%M:%S', _time.localtime())
 

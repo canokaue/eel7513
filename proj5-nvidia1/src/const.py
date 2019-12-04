@@ -8,11 +8,11 @@ from src.utils import Evaluator as _evaluator
 
 # loss weight = 1000
 # attr only
-
+# gpu-10k-attr-we1000-e20-b32-wo16
 
 base_path = '/home/kauecano/'
 
-_name = 'exp4-nvidia1'
+_name = 'proj5-nvidia1'
 
 # Network
 USE_NET = _net

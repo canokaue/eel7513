@@ -11,6 +11,8 @@ base_path = '/home/kauecano/'
 
 _name = 'proj_4-nvidia1'
 
+# gpu-50k-full-we200-e20-b50-wo10
+
 #DATASET SIZE
 TRAIN_SPLIT_LEN = 50000
 VAL_SPLIT_LEN = 50000

@@ -12,6 +12,7 @@ base_path = '/home/kauecano/'
 
 _name = 'proj_2-nvidia'
 
+# gpu-10k-full-we100-e20-b32-wo10
 
 NUM_WORKERS = 10
 NUM_EPOCH = 20

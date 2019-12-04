@@ -10,6 +10,8 @@ from src.utils import Evaluator as _evaluator
 #base_path = '/DeepFashion/'
 base_path = '/home/kauecano/'
 
+# gpu-20k-full-we100-e20-b40-wo14
+
 _name = 'proj_3-nvidia2'
 _time = _time.strftime('%m-%d %H:%M:%S', _time.localtime())
 
