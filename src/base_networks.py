@@ -106,8 +106,6 @@ class UnetSkipConnectionBlock(nn.Module):
 
 class ModuleWithAttr(nn.Module):
 
-    # 只能是数字，默认注册为0
-
     def __init__(self, extra_info=['step']):
         super(ModuleWithAttr, self).__init__()
         for key in extra_info:
@@ -134,11 +132,10 @@ class BaseLoss(ModuleWithAttr):
 
     def cal_loss(self, sample, output):
         category_loss = self.category_loss_func(output['category_output'], sample['category_label'])
-        # 所有的都是2类，每个2类有1000个，都分别计算交叉熵，计算之后的交叉熵加入weight，之后再全部取平均，与我们的期望符合
         attr_loss = self.attr_loss_func(output['attr_output'], sample['attr'])
         lm_vis_loss = self.lm_vis_loss_func(output['lm_vis_output'], sample['landmark_vis'])
         landmark_vis_float = torch.unsqueeze(sample['landmark_vis'].float(), dim=2)
-        landmark_vis_float = torch.cat([landmark_vis_float, landmark_vis_float], dim=2)  # 用真实值当mask，只计算vis=1时的损失
+        landmark_vis_float = torch.cat([landmark_vis_float, landmark_vis_float], dim=2)  
         lm_pos_loss = self.lm_pos_loss_func(
             landmark_vis_float * output['lm_pos_output'],
             landmark_vis_float * sample['landmark_pos_normalized']

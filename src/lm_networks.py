@@ -42,7 +42,6 @@ class LandmarkBranchUpsample(nn.Module):
         lm_pos_map = x
         batch_size, _, pred_h, pred_w = lm_pos_map.size()
         lm_pos_reshaped = lm_pos_map.reshape(batch_size, 8, -1).cpu()
-        # y是高上的坐标，x是宽上的坐标
         lm_pos_y, lm_pos_x = np.unravel_index(torch.argmax(lm_pos_reshaped, dim=2), (pred_h, pred_w))
         lm_pos_output = np.stack([lm_pos_x / (pred_w - 1), lm_pos_y / (pred_h - 1)], axis=2)
 
