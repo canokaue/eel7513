@@ -32,7 +32,7 @@ de desenvolvimento Google Colab utilizando funções e redes-base do Tensorflow 
 Keras 2.2.5.
 
 Já a rede P-Net foi desenvolvida pela interface do Visual Studio Code 1.40.1 com a
-biblioteca Pytorch 1.3.1 [26] para Cuda 10.1, contando com uma estrutura clássica de projetos
+biblioteca Pytorch 1.3.1 para Cuda 10.1, contando com uma estrutura clássica de projetos
 em Python - modularização de funções e variáveis em diversos arquivos com execução por
 terminal de comandos Unix.
 
