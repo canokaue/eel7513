@@ -38,7 +38,7 @@ terminal de comandos Unix.
 
 Resultados:
 
-<img src="photos/errate.png" align="center" />
+<img src="img/errate.png" align="center" />
 <img src="img/epochs.png" align="center" />
 <img src="img/nets.png" align="center" />
 <img src="img/predict.png" align="center" />
